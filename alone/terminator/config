@@ -1,0 +1,27 @@
+[global_config]
+  borderless = True
+  inactive_color_offset = 1.0
+  tab_position = hidden
+  window_state = hidden
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      size = 200, 380
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    background_color = "#272b36"
+    cursor_color = "#aaaaaa"
+    font = Iosevka 12
+    foreground_color = "#f6f6f6"
+    icon_bell = False
+    palette = "#f78764:#b2a66e:#c3ecea:#a4d4b4:#ffbeb9:#85787a:#dda0dd:#ced5db:#f78764:#b2a66e:#c3ecea:#a4d4b4:#ffbeb9:#85787a:#dda0dd:#ced5db"
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False

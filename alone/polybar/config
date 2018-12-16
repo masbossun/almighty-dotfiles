@@ -1,0 +1,262 @@
+[colors]
+transparrent  = 0
+background	  = ${xrdb:background:#ffffff}
+foreground	  = ${xrdb:foreground:#ffffff}
+urgent		    = #fff000
+red           = ${xrdb:red:#ffffff}
+orange        = ${xrdb:orange:#ffffff}
+yellow        = ${xrdb:yellow:#ffffff}
+teal          = ${xrdb:teal:#ffffff}
+green         = ${xrdb:green:#ffffff}
+blue          = ${xrdb:blue:#ffffff}
+softblue      = ${xrdb:softblue:#ffffff}
+brown         = ${xrdb:brown:#ffffff}
+purple        = ${xrdb:purple:#ffffff}
+
+[bar/mybar]
+
+;-;-;- DIMENSIONS -;-;-;
+
+width = 100%
+height = 25
+offset-y = 0
+offset-x = 0
+
+
+;border-top-size = 10
+;border-bottom-size = 0
+;border-right-size = 500
+;border-left-size = 20
+
+
+;-;-;- LOCATION -;-;-;
+
+bottom = false
+monitor = eDP-1
+wm-restack = i3
+
+
+;-;-;- FONTS -;-;-;
+
+font-0 = "Iosevka:style=Semibold:size=10;3"
+font-1 = "Monoisome:pixelsize=9;3"
+
+;-;-;- BAR -;-;-;
+
+background    = ${colors.background}
+foreground    = ${colors.foreground}
+border-color  = ${colors.transparrent}
+
+fixed-center = true
+;padding-left = 3
+;padding-right = 8
+module-margin = 0
+
+;modules-left = i3
+modules-left    = player-mpris-tail
+modules-center  = workspaces
+modules-right   = wlan memory volume battery date
+
+tray-position = none
+tray-detached = true
+
+
+;-;-;- MODULES -;-;-;
+
+[module/i3]
+type = internal/i3
+
+pin-workspaces = true
+strip-wsnumbers = true
+enable-scroll = false
+
+label-unfocused = %icon%
+label-unfocused-foreground = #274060
+label-focused = %icon%
+label-focused-foreground = #ffffff
+label-urgent = %icon%
+label-urgent-background = #ff0000
+
+label-focused-background = #274060
+label-focused-padding = 2
+label-unfocused-padding = 2
+
+;label-separator = " "
+label-separator-padding = 0
+label-separator-foreground = 0
+
+ws-icon-0 = 0;
+ws-icon-1 = 1;
+ws-icon-2 = 2;
+ws-icon-3 = 3;
+ws-icon-4 = 4;
+ws-icon-5 = 5;
+ws-icon-6 = 6;
+ws-icon-7 = 7;
+ws-icon-8 = 8;
+;ws-icon-9 = 9;
+;ws-icon-10 = 10;
+;ws-icon-11 = 11;
+ws-icon-default = ...
+
+[module/workspaces]
+type = internal/xworkspaces
+pin-workspaces = false
+enable-click = true
+enable-scroll = true
+format-padding = 0
+
+icon-default = 
+
+format = <label-state>
+label-active = " %icon% "
+label-active-foreground = ${colors.red}
+label-active-underline = ${colors.foreground}
+label-occupied = " %icon% "
+label-occupied-underline = ${colors.foreground}
+label-urgent = " %icon% "
+label-urgent-foreground = ${colors.urgent}
+label-urgent-underline = ${colors.urgent}
+label-empty = " %icon% "
+label-empty-foreground = ${colors.foreground}
+
+[module/xwindow]
+type			 = internal/xwindow
+label                    = %title:0:80:...%
+format-prefix            = " "
+format-prefix-foreground = ${colors.foreground}
+
+[module/date]
+type = internal/date
+date = %e %b ~ %H %M
+;date =  %e-%b
+label = %{F#f6f6f6}%date%
+label-foreground = ${colors.yellow}
+label-padding = 2
+
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+poll-interval = 1
+full-at = 100
+low-at = 7
+
+label-discharging = %percentage%%
+label-charging = %percentage%%
+label-full = %percentage%%
+label-low = %percentage%%
+
+format-discharging = <ramp-capacity> %{F#f6f6f6}<label-discharging>
+format-discharging-foreground = ${colors.green}
+format-discharging-padding = 2
+format-full =  %{F#f6f6f6}full
+format-full-foreground = ${colors.urgent}
+format-full-padding = 2
+format-charging =  %{F#f6f6f6}<label-charging>
+format-charging-foreground = ${colors.teal}
+format-charging-padding = 2
+format-low = :( %{F#f6f6f6}low
+format-low-foreground = ${colors.urgent}
+format-low-padding = 2
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+
+[module/volume]
+type = internal/volume
+format-volume =  %{F#f6f6f6}<label-volume>
+format-volume-foreground = ${colors.yellow}
+format-volume-padding = 2
+format-muted =  %{F#f6f6f6}0%
+format-muted-foreground = ${colors.yellow}
+format-muted-padding = 2
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+
+[module/mpd]
+type = internal/mpd
+label-offline = mpd is offline
+format-online = <icon-prev> <toggle> <icon-next> <label-song>
+format-offline = <label-offline>
+host = 127.0.0.1
+port = 6600
+icon-prev = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+icon-next = 
+label-song-maxlen = 25
+label-song-ellipsis = true
+bar-progress-width = 10
+bar-progress-indicator = |
+bar-progress-fill = ─
+bar-progress-empty = ─
+
+
+[module/backlight]
+type = internal/backlight
+; Use the following command to list available cards:
+; $ ls -1 /sys/class/backlight/
+card = radeon_bl0
+format = <ramp> <label>
+label = %percentage%%
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+
+
+[module/wlan]
+type = internal/network
+interface = wlp3s0
+interval = 5
+label-connected =  %{F#f6f6f6}%essid%
+label-disconnected = :( %{F#f6f6f6}wifi is empty
+label-connected-foreground = ${colors.red}
+label-connected-padding = 2
+label-disconnected-foreground = ${colors.red}
+label-disconnected-padding = 2
+
+[module/cpu]
+type = internal/cpu
+label =  %percentage%%
+label-foreground = ${colors.white}
+label-padding = 2
+
+
+[module/memory]
+type = internal/memory
+label =  %{F#f6f6f6}%gb_used%
+label-foreground = ${colors.orange} 
+label-padding = 2
+
+
+[module/network]
+type = internal/network
+interface = wlp3s0
+label-connected =  %downspeed% |  %upspeed%
+label-connected-foreground = ${colors.white}
+lable-connected-padding = 2
+
+[module/player-mpris-tail]
+type = custom/script
+exec = ~/.config/polybar/player-mpris-tail.py -f '{icon}𝄆{:artist:t50:{artist}:}{:artist: - :}{:t50:{title}:}'
+tail = true
+icon-default =
+label = %{F#f6f6f6}%output%%{F#DDA0DD} 
+click-left = ~/.config/polybar/player-mpris-tail.py previous
+click-right = ~/.config/polybar/player-mpris-tail.py next
+click-middle = ~/.config/polybar/player-mpris-tail.py play-pause
+label-foreground = ${colors.purple}
+label-padding = 2
+
+[module/info-todotxt]
+type	= custom/script
+exec	= ~/.config/polybar/info-todotxt.sh
+interval = 60

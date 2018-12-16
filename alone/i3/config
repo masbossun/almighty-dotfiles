@@ -1,0 +1,226 @@
+# Default modkey
+set $mod Mod4
+
+# Hide titlebar
+new_window pixel 0
+
+# i3-gaps
+gaps inner 15
+
+# Font for window titles
+font pango:Iosevka 14
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# Name the workspaces
+set $workspace0 "0"
+set $workspace1 "1"
+set $workspace2 "2"
+set $workspace3 "3"
+set $workspace4 "4"
+set $workspace5 "5"
+set $workspace6 "6"
+set $workspace7 "7"
+set $workspace8 "8"
+set $workspace9 "9"
+
+#set $workspace0 "零"
+#set $workspace1 "一"
+#set $workspace2 "二"
+#set $workspace3 "三"
+#set $workspace4 "四"
+#set $workspace5 "五"
+#set $workspace6 "六"
+#set $workspace7 "七"
+#set $workspace8 "八"
+#set $workspace9 "九"
+
+
+# Start a terminal
+bindsym $mod+Return exec terminator
+
+# Kill focused window
+bindsym $mod+Shift+q kill
+
+# Start rofi
+bindsym $mod+d exec rofi -show drun -theme mytheme -lines 5 -width 30 -terminal terminator
+
+# Move between windows
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+semicolon focus right
+
+# Alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Move focused window
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+semicolon move right
+
+# Alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# Split in horizontal orientation
+bindsym $mod+h split h
+
+# Split in vertical orientation
+bindsym $mod+v split v
+
+# Enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# Change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# Toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# Change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# Focus the parent container
+bindsym $mod+a focus parent
+
+# Screenshot entire monitor
+bindsym $mod+Print exec scrot
+
+# Switch to workspace
+bindsym $mod+1 workspace $workspace1
+bindsym $mod+2 workspace $workspace2
+bindsym $mod+3 workspace $workspace3
+bindsym $mod+4 workspace $workspace4
+bindsym $mod+5 workspace $workspace5
+bindsym $mod+6 workspace $workspace6
+bindsym $mod+7 workspace $workspace7
+bindsym $mod+8 workspace $workspace8
+bindsym $mod+9 workspace $workspace9
+bindsym $mod+0 workspace $workspace0
+
+# Move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $workspace1
+bindsym $mod+Shift+2 move container to workspace $workspace2
+bindsym $mod+Shift+3 move container to workspace $workspace3
+bindsym $mod+Shift+4 move container to workspace $workspace4
+bindsym $mod+Shift+5 move container to workspace $workspace5
+bindsym $mod+Shift+6 move container to workspace $workspace6
+bindsym $mod+Shift+7 move container to workspace $workspace7
+bindsym $mod+Shift+8 move container to workspace $workspace8
+bindsym $mod+Shift+9 move container to workspace $workspace9
+bindsym $mod+Shift+0 move container to workspace $workspace0
+
+# Always open some programs on specified workspace
+#assign [class="firefox"]    $workspace1
+#assign [class="emacs"]	    $workspace2
+#assign [class="VirtualBox"] $workspace5
+#assign [class="cmus"]		$workspace7
+#assign [class="spotify"]	$workspace7
+
+# Enable float for some windows
+for_window [class="^Pavucontrol$"] floating enable
+for_window [class="^Arandr$"] floating enable
+for_window [class="^Steam$" title="^Friends List$"] floating enable
+for_window [class="^Steam$" title="Steam - News"] floating enable
+for_window [class="^Steam$" title=".* - Chat"] floating enable
+for_window [class="^Steam$" title="^Settings$"] floating enable
+for_window [class="^Steam$" title=".* - event started"] floating enable
+for_window [class="^Steam$" title=".* CD key"] floating enable
+for_window [class="^Steam$" title="^Steam - Self Updater$"] floating enable
+for_window [class="^Steam$" title="^Screenshot Uploader$"] floating enable
+for_window [class="^Steam$" title="^Steam Guard - Computer Authorization Required$"] floating enable
+for_window [title="^Steam Keyboard$"] floating enable
+for_window [class="^emulator$"] floating enable
+
+# Audio and Backlight binding
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound 
+
+bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
+
+
+# Reload the configuration file
+bindsym $mod+Shift+c reload
+
+# Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+
+# Exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# Resize window (you can also use the mouse for that)
+mode "resize"
+{
+        # Resize with the arrow keys
+        bindsym Left resize shrink width 2 px or 2 ppt
+        bindsym Down resize grow height 2 px or 2 ppt
+        bindsym Up resize shrink height 2 px or 2 ppt
+        bindsym Right resize grow width 2 px or 2 ppt
+
+        # Back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"
+
+# Defining colors
+
+# RGB
+set $firebrick0		#b52c27 
+set $habanero0		#C13C5C 
+set $silver0		#e4e4e42 
+set $orange		#ff8700
+set $grey		#434241
+set $for_all            #252525
+
+# RGBA
+set $firebrick		#94291F60
+set $habanero		#C13C5C99
+set $purple		#452F5499
+set $wine		#72003e99
+set $magenta		#af005f99
+set $silver		#e4e4e499
+set $toxic		#8EC00099
+set $elegant		#00002c00
+set $elegant		#00263647
+set $none		#ffffff20
+
+# Set some nice colors      border	background	text		indicator
+client.focused              $for_all	$for_all    	$for_all    	$for_all    
+client.unfocused            $for_all	$for_all    	$for_all    	$for_all    
+client.focused_inactive     $for_all	$for_all    	$for_all    	$for_all    
+client.urgent               $for_all	$for_all    	$for_all    	$for_all    
+client.placeholder          $for_all	$for_all	$for_all	$for_all
+
+
+# Startup programs
+exec_always --no-startup-id feh --bg-fill ~/Pictures/daisukerichard-DoQdj8GVsAANQs-wall.png		# Wallpaper
+exec_always --no-startup-id killall polybar; polybar mybar				# Polybar
+exec_always --no-startup-id killall mpd; mpd						# Start mopidy/mpd
+exec_always --no-startup-id killall dunst; dunst -conf ~/.config/dunst/dunstrc						# Start notify listener
+exec_always --no-startup-id ~/.config/battery-full-notification/batteryfull.sh		# Battery full notification
+exec_always --no-startup-id xrdb ~/.Xresources			# updating xresources
+exec --no-startup-id xrandr --output eDP-1 --mode 1920x1080_60.00			# Change Resolution
+exec --no-startup-id compton --config ~/.config/compton/compton.night.conf		# Compositor for window transparency
+exec --no-startup-id light -S 18							# Set Backlight to 18% 
+exec --no-startup-id xbindkeys								# Load keyboard shortcuts
+exec --no-startup-id notify-send Welcome "masbossun!"					# Greeting on startup
+#exec --no-startup-id timedatectl set-local-rtc 1 --adjust-system-clock			# adjust clock
+
+#exec_always --no-startup-id ~/.monitor.sh # Automatically switch within monitors
+#exec --no-startup-id g213-led -fx hwave keys 0a # Set the keyboard colours
+#exec --no-startup-id setxkbmap latam # Set the keyboard layout
+#exec --no-startup-id emacs --daemon=instance1 # Daemonize Emacs
+#exec --no-startup-id xfce4-power-manager # To monitor batttery
