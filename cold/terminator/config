@@ -1,0 +1,25 @@
+[global_config]
+  enabled_plugins = TerminatorThemes, LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+  inactive_color_offset = 1.0
+  tab_position = hidden
+  window_state = hidden
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles] 
+ [[default]]
+    background_color = "#292a2b"
+    cursor_color = "#f0eeee"
+    font = Iosevka Term Medium 12
+    foreground_color = "#e6e6e6"
+    palette = "#676b79:#ff2c6d:#19f9d8:#ffb86c:#45a9f9:#b084eb:#6fc1ff:#d3d7cf:#676b79:#ff9ac1:#19f9d8:#ffcc95:#45a9f9:#b084eb:#6fc1ff:#eeeeec"
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
