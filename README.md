@@ -18,4 +18,4 @@ THis is my linux desktop configuration files for aestethic purpose, i am using t
 
 
 ### ketan hitam.
-`![ketan-hitam](https://raw.githubusercontent.com/masbossun/almighty-dotfiles/master/ketan-hitam/screenshot/SS.png)`
+![ketan-hitam](https://raw.githubusercontent.com/masbossun/almighty-dotfiles/master/ketan-hitam/screenshot/SS.png)
