@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1"
+	 id="Layer_1" inkscape:version="0.92.3 (2405546, 2018-03-11)" sodipodi:docname="mouse.svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+	 style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#666669;}
+	.st1{fill:#EDEDED;}
+	.st2{fill:#FFFFFF;}
+</style>
+<path id="path966" inkscape:connector-curvature="0" class="st0" d="M409.3,130.2c-0.2,0.1-0.3,0.1-0.5,0.2
+	c-10.7-58.5-62-102.9-123.6-102.9c-63.2,0-115.5,46.7-124.3,107.5c-0.1,0-0.2-0.1-0.4-0.1c-5.2,37.8-8.1,78.6-8.1,121.2
+	c0,43.4,3,85,8.4,123.5c0.1-0.1,0.3-0.1,0.4-0.1c0,0,0,0,0,0c9.7,59.7,61.5,105.2,124,105.2c62.4,0,114.1-45.4,123.9-105
+	c0.1,0,0.3,0,0.4,0c5.5-38.4,8.4-80.1,8.4-123.6C418.1,211.7,415,169.3,409.3,130.2L409.3,130.2z"/>
+<g id="layer2" inkscape:groupmode="layer" inkscape:label="Layer 2">
+	<path id="path15" inkscape:connector-curvature="0" class="st1" d="M380,130.2c-0.2,0.1-0.3,0.1-0.5,0.2
+		C368.9,71.8,317.6,27.5,256,27.5c-63.2,0-115.5,46.7-124.3,107.5c-0.1,0-0.2-0.1-0.4-0.1c-5.2,37.8-8.1,78.6-8.1,121.2
+		c0,43.4,3,85,8.4,123.5c0.1-0.1,0.3-0.1,0.4-0.1c0,0,0,0,0,0c9.7,59.7,61.5,105.2,124,105.2c62.4,0,114.1-45.4,123.9-105
+		c0.1,0,0.3,0,0.4,0c5.5-38.4,8.4-80.1,8.4-123.6C388.8,211.7,385.7,169.3,380,130.2L380,130.2z"/>
+	
+		<ellipse id="circle43" transform="matrix(0.1602 -0.9871 0.9871 0.1602 105.4408 345.6128)" class="st2" cx="255.8" cy="110.8" rx="14.7" ry="14.7"/>
+</g>
+</svg>

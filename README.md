@@ -15,3 +15,7 @@ THis is my linux desktop configuration files for aestethic purpose, i am using t
 
 ### alone.
 ![alone-desktop](https://raw.githubusercontent.com/masbossun/almighty-dotfiles/master/alone/images/SS.png)
+
+
+### ketan hitam.
+`![ketan-hitam](https://raw.githubusercontent.com/masbossun/almighty-dotfiles/master/ketan-hitam/screenshot/SS.png)`

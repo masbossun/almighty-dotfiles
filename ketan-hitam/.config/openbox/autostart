@@ -1,0 +1,5 @@
+feh --bg-scale ~/Pictures/jerry-zhang-9u5Lw227Rb0-unsplash.jpg &
+polybar example &
+compton &
+plank &
+dunst &
