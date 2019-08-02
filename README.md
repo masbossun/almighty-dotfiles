@@ -1,4 +1,4 @@
-# almighty-dotfiles
+# almighty-dotfiles ss
 THis is my linux desktop configuration files for aestethic purpose, i am using these tools/script from community :
 * [**I3-Gaps**](https://github.com/Airblader/i3) // Desktop Environment with tile-based window
 * [**Polybar**](https://github.com/jaagr/polybar) // Status Bar for showing some information on top of the desktop
