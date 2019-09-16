@@ -1,0 +1,23 @@
+" Special
+let wallpaper  = "/home/masbossun/Pictures/osman-rana-GXEZuWo5m4I-unsplash.jpg"
+let background = "#131313"
+let foreground = "#9ac1ca"
+let cursor     = "#9ac1ca"
+
+" Colors
+let color0  = "#131313"
+let color1  = "#616164"
+let color2  = "#9D5235"
+let color3  = "#D1633C"
+let color4  = "#976554"
+let color5  = "#C49753"
+let color6  = "#58748A"
+let color7  = "#9ac1ca"
+let color8  = "#6b878d"
+let color9  = "#616164"
+let color10 = "#9D5235"
+let color11 = "#D1633C"
+let color12 = "#976554"
+let color13 = "#C49753"
+let color14 = "#58748A"
+let color15 = "#9ac1ca"

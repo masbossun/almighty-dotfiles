@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/masbossun/Pictures/osman-rana-GXEZuWo5m4I-unsplash.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#131313",
+        "foreground": "#9ac1ca",
+        "cursor": "#9ac1ca"
+    },
+    "colors": {
+        "color0": "#131313",
+        "color1": "#616164",
+        "color2": "#9D5235",
+        "color3": "#D1633C",
+        "color4": "#976554",
+        "color5": "#C49753",
+        "color6": "#58748A",
+        "color7": "#9ac1ca",
+        "color8": "#6b878d",
+        "color9": "#616164",
+        "color10": "#9D5235",
+        "color11": "#D1633C",
+        "color12": "#976554",
+        "color13": "#C49753",
+        "color14": "#58748A",
+        "color15": "#9ac1ca"
+    }
+}
