@@ -19,3 +19,10 @@ THis is my linux desktop configuration files for aestethic purpose, i am using t
 
 ### ketan hitam.
 ![ketan-hitam](https://raw.githubusercontent.com/masbossun/almighty-dotfiles/master/ketan-hitam/screenshot/SS.png)
+
+### ranom shots.
+![vim-1](https://raw.githubusercontent.com/masbossun/almighty-dotfiles/master/random-shots/vim.jpeg)
+![vim-2](https://raw.githubusercontent.com/masbossun/almighty-dotfiles/master/random-shots/vim-2.jpeg)
+![vim-3](https://raw.githubusercontent.com/masbossun/almighty-dotfiles/master/random-shots/vim-3.jpeg)
+![sielais](https://raw.githubusercontent.com/masbossun/almighty-dotfiles/master/random-shots/sielais.jpeg)
+![kucing](https://raw.githubusercontent.com/masbossun/almighty-dotfiles/master/random-shots/kucing.jpeg)
