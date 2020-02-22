@@ -1,30 +1,39 @@
-packadd minpac
-call minpac#init()
-call minpac#add('k-takata/minpac', {'type': 'opt'})
-call minpac#add('tpope/vim-fugitive')
-call minpac#add('airblade/vim-gitgutter')
-call minpac#add('dart-lang/dart-vim-plugin')
-call minpac#add('thosakwe/vim-flutter')
-call minpac#add('neoclide/coc.nvim', {'branch': 'release'})
-call minpac#add('neoclide/coc-neco')
-call minpac#add('tpope/vim-commentary')
-call minpac#add('bronson/vim-trailing-whitespace')
-call minpac#add('jiangmiao/auto-pairs')
-call minpac#add('godlygeek/tabular')
-call minpac#add('iamcco/markdown-preview.nvim', {'do': 'cd app & yarn install'})
-call minpac#add('wakatime/vim-wakatime')
-call minpac#add('leafgarland/typescript-vim')
-call minpac#add('maxmellon/vim-jsx-pretty')
-call minpac#add('HerringtonDarkholme/yats.vim')
-call minpac#add('jparise/vim-graphql')
-call minpac#add('scrooloose/nerdtree')
-call minpac#add('jistr/vim-nerdtree-tabs')
-call minpac#add('chrisbra/colorizer')
-call minpac#add('dylanaraps/wal.vim')
-call minpac#add('majutsushi/tagbar')
-call minpac#add('mhinz/vim-startify')
-call minpac#add('ryanoasis/vim-devicons')
-call minpac#add('Yggdroot/indentLine')
+call plug#begin('~/.vim/plugged')
+
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'dart-lang/dart-vim-plugin'
+Plug 'thosakwe/vim-flutter'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc-neco'
+Plug 'tpope/vim-commentary'
+Plug 'bronson/vim-trailing-whitespace'
+Plug 'jiangmiao/auto-pairs'
+Plug 'godlygeek/tabular'
+Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app & yarn install'}
+Plug 'leafgarland/typescript-vim'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'jparise/vim-graphql'
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'chrisbra/colorizer'
+Plug 'dylanaraps/wal.vim'
+Plug 'majutsushi/tagbar'
+Plug 'mhinz/vim-startify'
+Plug 'ryanoasis/vim-devicons'
+Plug 'Yggdroot/indentLine'
+Plug 'itchyny/lightline.vim'
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
+Plug 'edkolev/tmuxline.vim'
+Plug 'flrnprz/plastic.vim'
+
+" Python Plugin
+Plug 'vim-scripts/indentpython.vim'
+Plug 'vim-python/python-syntax'
+
+call plug#end()
 
 filetype plugin on
 syntax on
@@ -46,7 +55,13 @@ set shell=/bin/zsh
 set matchpairs+=<:>
 set textwidth=80
 set updatetime=100
-colorscheme wal
+set termguicolors
+set background=dark
+set statusline^=%{coc#status())}
+set encoding=utf-8
+set background=dark
+colorscheme plastic
+
 " set nowrap
 " set signcolumn=yes
 " set noruler
@@ -59,9 +74,10 @@ colorscheme wal
 
 hi CursorLine cterm=none
 hi CursorLine gui=none
-" hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-" hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-" nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
+hi Comment cterm=italic
+hi Normal     ctermbg=NONE guibg=NONE
+hi LineNr     ctermbg=NONE guibg=NONE
+hi SignColumn ctermbg=NONE guibg=NONE
 
 " Yank and Paste to clipboard
 function! ClipboardYank()
@@ -136,7 +152,7 @@ imap ^[OD <ESC>hi
 let NERDTreeMinimalUI               = 1
 let NERDTreeShowHidden              = 1
 let NERDTreeIgnore                  = ['.git$', 'node_modules']
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " autocmd StdinReadPre * let s:std_in = 1
 
 " gitgutter
@@ -260,10 +276,22 @@ let g:mkdp_highlight_css = ''
 let g:mkdp_port = ''
 let g:mkdp_page_title = '「${name}」'
 
+" Vim Airline
+" let g:airline_theme = "plastic"
+" let g:airline_powerline_fonts=0
+" let g:tmuxline_separators = {
+"     \ 'left' : '',
+"     \ 'left_alt': '',
+"     \ 'right' : '',
+"     \ 'right_alt' : '',
+"     \ 'space' : ' '}
 
-" CURSORLINE HIGHLIGHT CURRENT PAGE
-" augroup CursorLine
-"   au!
-"   au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
-"   au WinLeave * setlocal nocursorline
-" augroup END
+" Vim Lightline
+let g:lightline = { 'colorscheme': 'plastic' }
+
+" Vim Indentline
+let g:indentLine_char = '•'
+
+
+" Python Syntax
+let g:python_highlight_all = 1
